@@ -47,11 +47,11 @@
         <input type="hidden" id="value">
         <input type="hidden" id="value2">
         <input type="hidden" id="value3">
-        <label>Rating 1: <input type="number" min="1" max="5" id="rating1"></label>
-        <label>Rating 2: <input type="number" min="1" max="5" id="rating2"></label>
-        <label>Rating 3: <input type="number" min="1" max="5" id="rating3"></label>
-        <label>Rating 4: <input type="number" min="1" max="5" id="rating4"></label>
-        <label>Rating 5: <input type="number" min="1" max="5" id="rating5"></label>
+        <label>Relevance: <input type="number" min="1" max="5" id="rating1"></label>
+        <label>Clarity and Coherence: <input type="number" min="1" max="5" id="rating2"></label>
+        <label>Visualization Quality: <input type="number" min="1" max="5" id="rating3"></label>
+        <label>Narrative Quality: <input type="number" min="1" max="5" id="rating4"></label>
+        <label>Factual Correctness: <input type="number" min="1" max="5" id="rating5"></label>
         <div class="submission-container">
             <button id="submit-btn" onclick="submitRating()">Submit</button>
         </div>
