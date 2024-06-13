@@ -18,4 +18,5 @@ use App\Http\Controllers\VisualizationController;
 //     return view('welcome');
 // });
 Route::get('/', [VisualizationController::class, 'index']);
-Route::get('/data/{id}/{key}', [VisualizationController::class, 'getData']);
+Route::get('/data/{id}', [VisualizationController::class, 'getData']);
+Route::post('/save-rating', [VisualizationController::class, 'saveRating']);
