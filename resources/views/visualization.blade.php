@@ -139,11 +139,11 @@
                 <button id="show-more" onclick="showMoreParagraph()" style="display:none;"
                     class="btn btn-success btn-sm">Show More</button>
             </div>
-
+<div class="container" id="chart6" style="display:none">
             <div class="row chart-container mt-4">
                 <div id="chart"></div>
             </div>
-
+        </div>
             <div class="text-center mt-4" id="button1" style="display: none;">
                 <button id="prev" onclick="prevGraph()" disabled class="btn btn-danger btn-sm">Previous</button>
                 <button id="next" onclick="nextGraph()" disabled class="btn btn-danger btn-sm">Next</button>
@@ -209,8 +209,10 @@
                         const titleElement5 = document.getElementById('value3');
                         var div6 = document.getElementById('paragraph');
                         var div7 = document.getElementById('container1');
+                        var div8 = document.getElementById('chart6');
                         div6.style.display = 'block';
                         div7.style.display = 'block';
+                        div8.style.display = 'block';
                         titleElement5.value = data.title;
                         titleElement2.innerText = data.title;
                         titleElement4.value = data.article_ids;
