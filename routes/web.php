@@ -20,3 +20,4 @@ use App\Http\Controllers\VisualizationController;
 Route::get('/', [VisualizationController::class, 'index']);
 Route::get('/data/{id}', [VisualizationController::class, 'getData']);
 Route::post('/save-rating', [VisualizationController::class, 'saveRating']);
+Route::get('/export-csv', [VisualizationController::class, 'exportCsv'])->name('ratings.export.csv');
