@@ -85,6 +85,7 @@
             margin-right: 10px;
         }
 
+
         #paragraph {
             background-color: #f8f9fa;
             padding: 15px;
@@ -127,6 +128,7 @@
             </select>
 
             <button onclick="loadGraph()" class="btn btn-primary mt-2 btn-sm">Load Graph</button>
+
             <h2 id="title" class="mt-2"></h2>
             <p id="paragraph" data-full="false" style="display:none"></p>
             <button id="show-more" onclick="showMoreParagraph()" style="display:none;"
@@ -134,13 +136,12 @@
 
             <div class="row chart-container mt-2">
                 <div id="chart"></div>
-
             </div>
-            <div class="mb-3" id="button1" style="display: none;">
+
+            <div class="text-center mt-4" id="button1" style="display: none;">
                 <button id="prev" onclick="prevGraph()" disabled class="btn btn-danger btn-sm">Previous</button>
                 <button id="next" onclick="nextGraph()" disabled class="btn btn-warning btn-sm">Next</button>
             </div>
-
 
             <div class="container mt-5" id="container1" style="display:none">
                 <div class="rating-container1" id="status1" style="display:none">
@@ -179,9 +180,10 @@
                 </div>
             </div>
 
-            <div class="error-message" style="display:none;">Please enter a value between 1 and 5.</div>
+            <div class="error-message text-center" style="display:none;">Please enter a value between 1 and 5.</div>
         </div>
     </main>
+
 
     <script>
         let currentIndex = 0;
