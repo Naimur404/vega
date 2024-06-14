@@ -27,6 +27,10 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 30px;
             margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* min-height: 100vh; */
         }
 
         h1 {
@@ -119,9 +123,9 @@
     <main>
         <div class="container mt-3">
             <h1 id="hello"></h1>
-            <label for="article-id">Select Story</label>
+            <label for="article-id"><b>Select Story</b></label>
 
-            <select id="article-id" class="form-select" aria-label="Default select example">
+            <select id="article-id" class="form-select mt-2" aria-label="Default select example">
                 @foreach ($data as $a)
                     <option value="{{ $a['id'] }}">({{ $a['id'] }}) {{ $a['article_title'] }}</option>
                 @endforeach
@@ -131,16 +135,18 @@
 
             <h2 id="title" class="mt-2"></h2>
             <p id="paragraph" data-full="false" style="display:none"></p>
-            <button id="show-more" onclick="showMoreParagraph()" style="display:none;"
-                class="btn btn-success btn-sm">Show More</button>
+            <div class="text-center">
+                <button id="show-more" onclick="showMoreParagraph()" style="display:none;"
+                    class="btn btn-success btn-sm">Show More</button>
+            </div>
 
-            <div class="row chart-container mt-2">
+            <div class="row chart-container mt-4">
                 <div id="chart"></div>
             </div>
 
             <div class="text-center mt-4" id="button1" style="display: none;">
                 <button id="prev" onclick="prevGraph()" disabled class="btn btn-danger btn-sm">Previous</button>
-                <button id="next" onclick="nextGraph()" disabled class="btn btn-warning btn-sm">Next</button>
+                <button id="next" onclick="nextGraph()" disabled class="btn btn-danger btn-sm">Next</button>
             </div>
 
             <div class="container mt-5" id="container1" style="display:none">
