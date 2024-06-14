@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use App\Models\Rating; // Assuming you have a Rating model for saving ratings
+use App\Models\Rating;
+use Carbon\Carbon;
+use Rap2hpoutre\FastExcel\FastExcel; // Assuming you have a Rating model for saving ratings
 
 class VisualizationController extends Controller
 {
@@ -84,6 +86,25 @@ class VisualizationController extends Controller
 
 
         return response()->json(['success' => 'Rating saved successfully']);
+    }
+
+    public function exportCsv()
+    {
+        return (new FastExcel(Rating::select(
+            // 'id',
+            // 'json_id',
+            'article_id',
+            'article_title',
+            'type',
+            'relevance',
+            'clarity_and_coherence',
+            'visualization_quality',
+            'narrative_quality',
+            'factual_correctness',
+            // 'ip',
+            // 'created_at',
+            // 'updated_at'
+        )->orderBy('article_id', 'asc')->get()))->download('ratings-'.Carbon::now()->format('Y-m-d').'.csv');
     }
 }
 
