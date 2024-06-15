@@ -13,7 +13,7 @@ class Rating extends Model
         'article_id',
         'article_title',
         'type',
-        'relevance',
+        'informativeness',
         'clarity_and_coherence',
         'visualization_quality',
         'narrative_quality',

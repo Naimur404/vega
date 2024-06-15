@@ -157,7 +157,7 @@
 
                     <div class="row mb-3">
                         <div class="col">
-                            <label for="rating1" class="form-label">Relevance:</label>
+                            <label for="rating1" class="form-label">Informativeness:</label>
                             <input type="number" min="1" max="5" id="rating1" class="form-control">
                         </div>
                         <div class="col">
