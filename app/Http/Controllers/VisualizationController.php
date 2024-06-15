@@ -75,7 +75,7 @@ class VisualizationController extends Controller
         $ratingsModel->article_id = $request->article_ids;
         $ratingsModel->article_title = $request->title;
         $ratingsModel->type = $request->graph_index;
-        $ratingsModel->relevance = $ratings[0];
+        $ratingsModel->informativeness = $ratings[0];
         $ratingsModel->clarity_and_coherence = $ratings[1];
         $ratingsModel->visualization_quality = $ratings[2];
         $ratingsModel->narrative_quality = $ratings[3];
@@ -92,11 +92,11 @@ class VisualizationController extends Controller
     {
         return (new FastExcel(Rating::select(
             // 'id',
-            // 'json_id',
+            'json_id',
             'article_id',
             'article_title',
             'type',
-            'relevance',
+            'informativeness',
             'clarity_and_coherence',
             'visualization_quality',
             'narrative_quality',
